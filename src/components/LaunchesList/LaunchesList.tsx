@@ -1,4 +1,6 @@
 import LaunchesListItem from './LaunchesListItem/LaunchesListItem.tsx'
+import { motion } from 'framer-motion'
+import { childrenVariants, variants } from './LaunchesList.animation.ts'
 
 import './ShipsList.css'
 
@@ -14,11 +16,21 @@ const LaunchesList = () => {
     <div className='launches-list'>
       <h2 className='launches-list__title'>Launches</h2>
       {loading && <p>Loading...</p>}
-      <div className='launches-list__grid'>
-        {data?.launches.map((launch) => (
-          <LaunchesListItem key={launch.id} launch={launch} />
-        ))}
-      </div>
+      {data?.launches && (
+        <motion.div
+          className='launches-list__grid'
+          variants={variants}
+          initial='initial'
+          animate='animate'
+          exit='exit'
+        >
+          {data.launches.map((launch) => (
+            <motion.div key={launch.id} variants={childrenVariants}>
+              <LaunchesListItem launch={launch} />
+            </motion.div>
+          ))}
+        </motion.div>
+      )}
     </div>
   )
 }
