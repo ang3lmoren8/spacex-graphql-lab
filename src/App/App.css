@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;700;900&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  --border-radius-base: 6px;
+  --element-color: #161616;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.container {
+  max-width: 1280px;
+  margin: auto;
+  padding: 3rem 24px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Exo 2', sans-serif !important;
+}
+
+h1 {
+  font-size: 62px;
+  color: transparent;
+  background: linear-gradient(90deg, #f7fffc, #2e00fc 30%);
+  -webkit-background-clip: text;
+}
+
+h2 {
+  font-size: 34px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+p,
+span {
+  font-family: 'Space Mono', monospace;
+}

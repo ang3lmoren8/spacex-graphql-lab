@@ -1,0 +1,19 @@
+.launches-list-item {
+  overflow: hidden;
+  background-color: var(--element-color);
+  border-radius: var(--border-radius-base);
+  cursor: pointer;
+}
+
+.launches-list-item__img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.launches-list-item__body {
+  padding: 16px;
+}
+
+.launch-list-item__name {
+  margin: 0;
+}

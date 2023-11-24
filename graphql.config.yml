@@ -1,0 +1,2 @@
+schema: https://spacex-production.up.railway.app/
+documents: '**/*.graphql'

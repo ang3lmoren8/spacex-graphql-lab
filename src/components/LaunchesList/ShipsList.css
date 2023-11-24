@@ -1,0 +1,19 @@
+.launches-list {
+    margin: 3rem 0;
+}
+
+.launches-list__title {
+    margin-bottom: 24px;
+}
+
+.launches-list__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+@media screen and (max-width: 720px) {
+ .launches-list__grid {
+     grid-template-columns: 1fr;
+ }
+}
