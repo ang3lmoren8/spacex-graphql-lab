@@ -1,28 +1,15 @@
 import { gql } from '@apollo/client'
 
+// TODO complete the query
 export const GET_LAUNCHES = gql`
-  query getLaunches($limit: Int) {
-    launches(limit: $limit) {
+  query getLaunches {
+    launches {
       id
-      links {
-        flickr_images
-      }
-      mission_name
-      launch_date_utc
     }
   }
 `
 
+// TODO complete the query
 export const GET_LAUNCH_BY_ID = gql`
-  query getLaunchById($launchId: ID!) {
-    launch(id: $launchId) {
-      id
-      links {
-        flickr_images
-      }
-      mission_name
-      launch_date_utc
-      details
-    }
-  }
+  
 `

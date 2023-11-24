@@ -1,23 +1,20 @@
 import { useParams } from 'react-router-dom'
-import { useQuery } from '@apollo/client'
-import { GET_LAUNCH_BY_ID } from '../../api/queries.ts'
-import { GetLaunchByIdResponse } from '../../api/queries.types.ts'
 
-import './LaunchDetail.css'
 import ImagesGrid from '../../components/ImagesGrid/ImagesGrid.tsx'
 import dayjs from 'dayjs'
 import LeftField from '../../components/LeftField/LeftField.tsx'
+import Launch from '../../api/schema/Launch.ts'
+
+import './LaunchDetail.css'
 
 const LaunchDetail = () => {
   const { id } = useParams()
 
-  const { data, loading } = useQuery<GetLaunchByIdResponse>(GET_LAUNCH_BY_ID, {
-    variables: {
-      launchId: id,
-    },
-  })
+  // TODO Add a connection with useQuery
+  const loading = true
+  const data = null
 
-  const launch = data?.launch
+  const launch: Launch = data?.launch
 
   return (
     <div className='container'>
